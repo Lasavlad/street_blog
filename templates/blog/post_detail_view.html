@@ -1,6 +1,10 @@
 {% extends '_base.html' %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/post_detail_css/base.css' %}">{% endblock %}
 
 {% block title %}{{ post.title }}{% endblock title %}
+
 
 {% block content %}
 
@@ -17,7 +21,7 @@ HEADER
 					</p>
 					<h1 class="display-4 secondfont mb-3 font-weight-bold">{{ post.title }}</h1>
 					<p class="mb-3">
-						 Analysts told CNBC that the currency could hit anywhere between $1.35-$1.40 if the deal gets passed through the U.K. parliament.
+						{{ post.introduction }}
 					</p>
 					<div class="d-flex align-items-center">
 						<img class="rounded-circle" src="https://placehold.co/400" width="70">
@@ -27,7 +31,7 @@ HEADER
 				</div>
 				<div class="col-md-6 pr-0">
 					{% if post.post_image %}
-						<img src="{{ post.post_image.url }}">
+						<img id="post-image" src="{{ post.post_image.url }}">
 					{% else %}
 						<img src="https://placehold.co/400">
 					{% endif %}

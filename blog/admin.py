@@ -10,7 +10,7 @@ class PostAdmin(admin.ModelAdmin):
         CommentInline
     ]
 
-    list_display = ('title', 'author', 'created_on', 'Category')
+    list_display = ('title', 'author', 'created_on', 'category')
 
 
 admin.site.register(Post, PostAdmin)

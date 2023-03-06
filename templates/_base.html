@@ -16,7 +16,9 @@
         crossorigin="anonymous"
     >
     <!-- base css -->
+    {% block css %}{% endblock %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+   
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>

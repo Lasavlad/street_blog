@@ -1,0 +1,10 @@
+#post-image {
+    max-width: 70%;
+}
+
+@media screen and (max-width: 780px){
+    #post-image {
+        max-width: 100%;
+    }
+
+}

@@ -20,7 +20,7 @@ class Post(models.Model):
     post_image = models.ImageField(upload_to='covers/', blank=True, null=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    Category = models.ForeignKey(
+    category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE
     )
