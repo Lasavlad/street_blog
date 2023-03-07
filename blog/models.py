@@ -55,6 +55,6 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.user.username)
+        return 'Comment {} by {}'.format(self.body, self.posted_by.username)
 
 # Create your models here.

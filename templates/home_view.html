@@ -68,7 +68,7 @@ SUBMAIN-1----------------
                 {% if posts %}
                     {% for post in posts|slice:":3" %}
                         <div class="mb-3 d-flex align-items-center">
-                            <img height="80" src="./assets/img/demo/blog4.jpg">
+                            <img height="80" src="{{ post.post_image.url }}">
                             <div class="pl-3">
                                 <h2 class="mb-2 h6 font-weight-bold">
                                 <a class="text-dark" href="{% url 'post-detail-view' slug=post.slug%}">{{ post.title }}</a>
